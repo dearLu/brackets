@@ -7,6 +7,14 @@ module.exports = function check(str, bracketsConfig) {
         arr.push(brackets[i][j]);
       }
   } 
+  for(let i=0; i<arr.length; i++){   
+    let ind = arr.indexOf('|')
+    if(ind % 2 === 0){
+      arr[ind]='(';
+    }else{
+      arr[ind]=')';
+    }
+  } 
     for(let bracket of str) {
       let bracketsIndex = arr.indexOf(bracket)
   
