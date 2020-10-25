@@ -10,9 +10,9 @@ module.exports = function check(str, bracketsConfig) {
   for(let i=0; i<arr.length; i++){   
     let ind = arr.indexOf('|')
     if(ind % 2 === 0){
-      arr[ind]='(';
+      arr[ind]='<';
     }else{
-      arr[ind]=')';
+      arr[ind]='>';
     }
   } 
     for(let bracket of str) {
